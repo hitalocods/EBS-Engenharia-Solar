@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EBS Engenharia e Energia Solar | Energia solar no Piaui</title>
+    <meta
+      name="description"
+      content="Reduza sua conta de energia em ate 95% com projetos fotovoltaicos premium para residencias, comercios, industrias e propriedades rurais."
+    />
+    <meta name="theme-color" content="#071A35" />
+    <meta property="og:title" content="EBS Engenharia e Energia Solar" />
+    <meta property="og:description" content="Simule sua economia e fale com um especialista em energia solar." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: "#071A35",
+              ink: "#081224",
+              solar: "#FFC400",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="header">
+      <nav class="nav-shell">
+        <a href="#inicio" class="brand" aria-label="EBS Engenharia e Energia Solar">
+          <span class="brand-sun"></span>
+          <span class="brand-mark">EBS</span>
+          <span class="brand-sub">Engenharia e Energia Solar</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#inicio">Inicio</a>
+          <a href="#solucoes">Solucoes</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#quem-somos">Quem Somos</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <a class="nav-cta" href="https://wa.me/5586999917016?text=Quero%20solicitar%20um%20orcamento%20de%20energia%20solar" target="_blank" rel="noopener">
+          Solicitar orcamento
+          <span>&nearr;</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-shade"></div>
+
+        <div class="hero-content page-pad">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span>Energia solar e economia de verdade</div>
+            <h1>Reduza sua conta de energia em ate <strong>95%</strong></h1>
+            <p>
+              Solucoes completas em energia solar fotovoltaica para residencias, comercios, industrias e propriedades rurais.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-solar" href="https://wa.me/5586999917016?text=Quero%20solicitar%20um%20orcamento" target="_blank" rel="noopener">Solicitar orcamento</a>
+              <a class="btn btn-ghost" href="#simulador">Simular economia</a>
+            </div>
+            <div class="hero-features" id="solucoes">
+              <div><i data-lucide="route"></i><span>Projetos personalizados</span></div>
+              <div><i data-lucide="badge-check"></i><span>Equipamentos premium</span></div>
+              <div><i data-lucide="wrench"></i><span>Instalacao homologada</span></div>
+              <div><i data-lucide="shield-check"></i><span>Garantia e suporte</span></div>
+            </div>
+          </div>
+
+          <aside class="calculator-card" id="simulador" aria-label="Simule sua economia">
+            <h2>Simule sua economia agora</h2>
+            <label>
+              Quanto e sua conta de energia?
+              <input type="text" id="billInput" inputmode="numeric" value="R$ 800,00" />
+            </label>
+            <label>
+              Onde voce mora?
+              <select id="cityInput">
+                <option>Teresina - PI</option>
+                <option>Nazaria - PI</option>
+                <option>Parnaiba - PI</option>
+                <option>Picos - PI</option>
+                <option>Floriano - PI</option>
+              </select>
+            </label>
+            <label>
+              Tipo de imovel
+              <select id="typeInput">
+                <option value="0.95">Residencial</option>
+                <option value="0.92">Comercial</option>
+                <option value="0.9">Rural</option>
+                <option value="0.88">Industrial</option>
+              </select>
+            </label>
+            <div class="result-box">
+              <span>Voce pode economizar ate</span>
+              <strong id="savingValue">R$ 760/mes</strong>
+              <small id="savingYear">Isso e R$ 9.120 por ano</small>
+            </div>
+            <button class="btn btn-solar full" id="analysisBtn">Receber analise gratuita</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div class="stats-grid page-pad">
+          <div class="stat-card"><i data-lucide="solar-panel"></i><strong><span data-count="70">0</span>+</strong><p>Projetos concluidos</p></div>
+          <div class="stat-card"><i data-lucide="zap"></i><strong><span data-count="750">0</span> MWh</strong><p>De energia ja gerada</p></div>
+          <div class="stat-card"><i data-lucide="piggy-bank"></i><strong>R$ <span data-count="2.8">0</span> mi</strong><p>Economizados por clientes</p></div>
+          <div class="stat-card"><i data-lucide="map-pin"></i><strong>Todo o Piaui</strong><p>Atendimento regional</p></div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projetos">
+        <div class="section-head page-pad">
+          <div>
+            <span class="section-kicker"></span>
+            <h2>Nossos Projetos</h2>
+            <p>Energia solar que voce ve, economia que voce sente.</p>
+          </div>
+          <a class="outline-link" href="https://wa.me/5586999917016?text=Quero%20conhecer%20os%20projetos%20da%20EBS" target="_blank" rel="noopener">Ver todos os projetos <span>&rarr;</span></a>
+        </div>
+
+        <div class="swiper project-swiper page-pad">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide project-card">
+              <img src="img/2.png" alt="Projeto solar residencial em Teresina" loading="lazy" />
+              <div class="project-info">
+                <span>14 paineis solares</span>
+                <h3>Teresina - PI</h3>
+                <p>Economia anual de</p>
+                <strong>R$ 13.560,00</strong>
+                <a href="https://wa.me/5586999917016" target="_blank" rel="noopener">Ver projeto</a>
+              </div>
+            </article>
+            <article class="swiper-slide project-card">
+              <img src="img/4.png" alt="Projeto solar com 27 paineis" loading="lazy" />
+              <div class="project-info">
+                <span>27 paineis solares</span>
+                <h3>Teresina - PI</h3>
+                <p>Economia anual de</p>
+                <strong>R$ 27.000,00</strong>
+                <a href="https://wa.me/5586999917016" target="_blank" rel="noopener">Ver projeto</a>
+              </div>
+            </article>
+            <article class="swiper-slide project-card">
+              <img src="img/3.png" alt="Projeto solar comercial em Nazaria" loading="lazy" />
+              <div class="project-info">
+                <span>14 paineis solares</span>
+                <h3>Nazaria - PI</h3>
+                <p>Economia anual de</p>
+                <strong>R$ 13.560,00</strong>
+                <a href="https://wa.me/5586999917016" target="_blank" rel="noopener">Ver projeto</a>
+              </div>
+            </article>
+            <article class="swiper-slide project-card">
+              <img src="img/1.png" alt="Projeto solar de grande porte" loading="lazy" />
+              <div class="project-info">
+                <span>60 paineis solares</span>
+                <h3>Teresina - PI</h3>
+                <p>Economia anual de</p>
+                <strong>R$ 50.400,00</strong>
+                <a href="https://wa.me/5586999917016" target="_blank" rel="noopener">Ver projeto</a>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="section process-section" id="quem-somos">
+        <div class="process-wrap page-pad">
+          <div class="process-copy">
+            <span class="section-kicker"></span>
+            <h2>Como funciona</h2>
+            <p>Do projeto a economia, nos cuidamos de tudo.</p>
+            <div class="steps-grid">
+              <div><span>01</span><h3>Analise gratuita</h3><p>Avaliamos seu consumo e seu imovel para orientar a melhor solucao.</p></div>
+              <div><span>02</span><h3>Projeto personalizado</h3><p>Dimensionamos o sistema ideal para voce economizar mais.</p></div>
+              <div><span>03</span><h3>Homologacao</h3><p>Cuidamos de toda a documentacao junto a concessionaria.</p></div>
+              <div><span>04</span><h3>Instalacao</h3><p>Equipe tecnica instala, testa e entrega seu sistema pronto.</p></div>
+            </div>
+          </div>
+          <div class="process-media">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1300&q=85" alt="Tecnico instalando paineis solares" loading="lazy" />
+            <a href="#videos" class="video-call"><span>&#9658;</span> Assista ao video e conheca nosso trabalho</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section before-after">
+        <div class="before-wrap page-pad">
+          <div>
+            <span class="section-kicker"></span>
+            <h2>Pare de pagar caro na conta de luz</h2>
+            <p>Veja a diferenca que a energia solar faz no seu bolso.</p>
+          </div>
+          <div class="compare-cards">
+            <div class="compare-card before"><span>Antes</span><small>Sem energia solar</small><strong>R$ 1.800,00</strong><p>por mes</p></div>
+            <div class="arrow-pulse">&rarr;</div>
+            <div class="compare-card after"><span>Depois</span><small>Com energia solar</small><strong>R$ 120,00</strong><p>por mes</p></div>
+          </div>
+          <ul class="benefit-list">
+            <li>Economia de ate 95% na conta</li>
+            <li>Valorizacao do seu imovel</li>
+            <li>Energia limpa e renovavel</li>
+            <li>Independencia da concessionaria</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section proof-section" id="depoimentos">
+        <div class="proof-grid page-pad">
+          <div>
+            <span class="section-kicker"></span>
+            <h2>O que nossos clientes dizem</h2>
+            <p>Historias reais de quem ja economiza todos os dias.</p>
+            <div class="swiper testimonial-swiper">
+              <div class="swiper-wrapper">
+                <article class="swiper-slide testimonial-card">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80" alt="Cliente Jose Silva" loading="lazy" />
+                  <blockquote>"A EBS mudou nossa realidade. Hoje nossa conta de luz e praticamente zero. Atendimento top do inicio ao fim!"</blockquote>
+                  <strong>Jose Silva, Teresina - PI</strong>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </article>
+                <article class="swiper-slide testimonial-card">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80" alt="Cliente Ana Maria" loading="lazy" />
+                  <blockquote>"Equipe muito tecnica, obra organizada e uma economia que chegou no primeiro mes."</blockquote>
+                  <strong>Ana Maria, Nazaria - PI</strong>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </article>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div id="videos">
+            <span class="section-kicker"></span>
+            <h2>Nosso trabalho em videos</h2>
+            <p>Confira projetos, instalacoes e depoimentos.</p>
+            <div class="video-grid">
+              <button><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=500&q=80" alt="Instalacao solar" loading="lazy" /><span>&#9658;</span><small>Instalacao em Teresina - PI</small></button>
+              <button><img src="img/1.png" alt="Projeto comercial" loading="lazy" /><span>&#9658;</span><small>Projeto comercial</small></button>
+              <button><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80" alt="Depoimento de cliente" loading="lazy" /><span>&#9658;</span><small>Depoimento de cliente</small></button>
+              <button><img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=500&q=80" alt="Bastidores da equipe" loading="lazy" /><span>&#9658;</span><small>Bastidores da equipe</small></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contato">
+        <div class="page-pad cta-inner">
+          <div>
+            <h2>Pronto para economizar tambem?</h2>
+            <p>Solicite agora uma analise gratuita e descubra quanto voce pode economizar.</p>
+          </div>
+          <a class="btn btn-solar cta-big" href="https://wa.me/5586999917016?text=Quero%20falar%20com%20um%20especialista%20em%20energia%20solar" target="_blank" rel="noopener">Falar com especialista</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid page-pad">
+        <div>
+          <a href="#inicio" class="brand footer-brand"><span class="brand-sun"></span><span class="brand-mark">EBS</span><span class="brand-sub">Engenharia e Energia Solar</span></a>
+          <p>Solucoes em energia solar fotovoltaica com qualidade, seguranca e economia.</p>
+        </div>
+        <div><h3>Navegacao</h3><a href="#inicio">Inicio</a><a href="#solucoes">Solucoes</a><a href="#projetos">Projetos</a><a href="#depoimentos">Depoimentos</a></div>
+        <div><h3>Solucoes</h3><a>Residencial</a><a>Comercial</a><a>Rural</a><a>Industrial</a></div>
+        <div><h3>Atendimento</h3><p>(86) 99951-4461</p><p>contato@ebsengenharia.com</p><p>Teresina - PI</p><p>Atendemos todo o Piaui</p></div>
+        <div><h3>Redes sociais</h3><div class="socials"><a>Instagram</a><a>Facebook</a><a>WhatsApp</a></div></div>
+      </div>
+    <div class="copyright page-pad">&copy; 2026 EBS Engenharia e Energia Solar. Todos os direitos reservados.</div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5586999917016" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
