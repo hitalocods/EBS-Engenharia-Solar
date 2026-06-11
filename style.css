@@ -785,6 +785,22 @@ a {
   overflow: hidden;
   opacity: 1 !important;
   transform: none !important;
+  touch-action: pan-y;
+  pointer-events: auto;
+}
+
+.testimonial-swiper .swiper-slide {
+  touch-action: pan-y;
+  pointer-events: auto;
+}
+
+.testimonial-swiper .testimonial-card,
+.testimonial-swiper img,
+.testimonial-swiper blockquote,
+.testimonial-swiper strong,
+.testimonial-swiper span {
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .proof-section h2,
