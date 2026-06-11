@@ -683,6 +683,81 @@ a {
   font-weight: 900;
 }
 
+.talao-proof {
+  margin-top: 56px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.talao-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.talao-head h3 {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 900;
+  margin: 6px 0 8px;
+}
+
+.talao-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.talao-grid {
+  display: grid;
+  grid-template-columns: 1fr 54px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.talao-card {
+  margin: 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.talao-card.after {
+  background: linear-gradient(135deg, rgba(0, 82, 204, 0.54), rgba(0, 156, 255, 0.16));
+  border-color: rgba(255, 196, 0, 0.24);
+}
+
+.talao-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--solar);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.talao-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.talao-card figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.talao-card figcaption strong {
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 900;
+}
+
+.talao-card figcaption small {
+  color: var(--muted);
+}
+
 .proof-grid {
   display: grid;
   grid-template-columns: 0.74fr 1.26fr;
@@ -757,57 +832,77 @@ a {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 18px;
   margin-top: 28px;
 }
 
-.video-grid button {
-  position: relative;
-  height: 210px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 10px;
-  padding: 0;
-  background: #000;
-  cursor: pointer;
+.video-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.video-grid img {
+.video-card video {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 9 / 16;
   object-fit: cover;
-  opacity: 0.82;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #000;
+  display: block;
 }
 
-.video-grid button:hover img {
-  transform: scale(1.08);
-  opacity: 0.58;
-}
-
-.video-grid span {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 999px;
-  background: rgba(8, 18, 36, 0.72);
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  color: white;
-}
-
-.video-grid small {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+.video-card figcaption {
   color: white;
   text-align: left;
   font-weight: 900;
+  font-size: 14px;
+}
+
+.clients-head {
+  max-width: 640px;
+  margin-bottom: 34px;
+}
+
+.clients-head h2 {
+  margin: 6px 0 8px;
+}
+
+.clients-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.client-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.client-card img,
+.client-card video {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #000;
+  display: block;
+}
+
+.client-card figcaption {
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 800;
+  font-size: 14px;
 }
 
 .final-cta {
@@ -945,6 +1040,14 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .before-wrap {
     align-items: start;
   }
@@ -1015,8 +1118,15 @@ a {
   .hero-features,
   .stats-grid,
   .steps-grid,
-  .video-grid,
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1058,7 +1168,8 @@ a {
     padding: 18px;
   }
 
-  .compare-cards {
+  .compare-cards,
+  .talao-grid {
     grid-template-columns: 1fr;
   }
 
