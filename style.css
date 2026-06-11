@@ -1141,9 +1141,39 @@ a {
 
   .hero-features,
   .stats-grid,
-  .steps-grid,
-  .footer-grid {
+  .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    row-gap: 26px;
+  }
+
+  .footer-grid > div {
+    min-width: 0;
+    padding-bottom: 6px;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer-grid a,
+  .footer-grid p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .socials {
+    gap: 10px;
   }
 
   .video-grid {
@@ -1195,6 +1225,41 @@ a {
   .compare-cards,
   .talao-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    gap: 20px;
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+
+  .footer-grid > div {
+    min-width: 0;
+  }
+
+  .footer-grid h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer-grid a,
+  .footer-grid p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .socials {
+    gap: 10px;
+  }
+
+  .footer-brand {
+    margin-bottom: 14px;
+  }
+
+  .copyright {
+    padding: 18px 0 12px;
+    font-size: 12px;
   }
 
   .arrow-pulse {
