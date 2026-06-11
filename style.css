@@ -87,6 +87,13 @@ a {
   letter-spacing: 0;
 }
 
+.brand-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto -2px;
+}
+
 .brand-sub {
   font-size: 7px;
   font-weight: 800;
@@ -770,6 +777,7 @@ a {
 }
 
 .testimonial-swiper {
+  position: relative;
   width: 100%;
   max-width: 100%;
   margin-top: 28px;

@@ -86,9 +86,21 @@ const projectSwiper = new Swiper(".project-swiper", {
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
   slidesPerView: 1,
   loop: true,
+  allowTouchMove: true,
+  simulateTouch: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  threshold: 10,
+  longSwipes: true,
+  longSwipesRatio: 0.5,
+  preventInteractionOnTransition: false,
+  touchStartPreventDefault: false,
   autoplay: {
     delay: 4300,
     disableOnInteraction: false,
+    enabled: true,
   },
   pagination: {
     el: ".testimonial-swiper .swiper-pagination",
